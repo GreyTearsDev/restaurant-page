@@ -1,5 +1,6 @@
 export default function loadPage() {
   const content = document.createElement("div");
+  document.body.appendChild(content);
   content.id = "content";
 
   const homePageContentDiv = document.createElement("div");
@@ -28,12 +29,14 @@ export default function loadPage() {
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
 
-  bgImage.src = "./images/cottonbro.jpeg";
+  bgImage.src = "./cottonbro";
   bgImage.alt = "plate with boiled eggs";
   bgImage.classList.add("hero-image");
   homePageContentDiv.appendChild(bgImage);
 
   mainElements.forEach((element) => main.appendChild(element));
 
-  document.body.appendChild(content.appendChild(homePageContentDiv));
+  homePageContentDiv.appendChild(header);
+  homePageContentDiv.appendChild(main);
+  content.appendChild(homePageContentDiv);
 }
