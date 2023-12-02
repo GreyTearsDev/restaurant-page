@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GreyTearsDev/restaurant-page.git"
+  },
+  "author": "GreyTearsDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreyTearsDev/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/GreyTearsDev/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
