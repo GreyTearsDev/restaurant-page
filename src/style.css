@@ -7,8 +7,17 @@
   font-size: 16px;
 }
 
-.hero-image {
+#content {
+  display: grid;
+  grid-template-rows: 10vh 1fr;
   position: relative;
+}
+
+main {
+}
+
+.hero-image {
+  position: absolute;
   z-index: -1;
 }
 

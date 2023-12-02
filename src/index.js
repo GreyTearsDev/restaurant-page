@@ -1,1 +1,3 @@
-console.log("you");
+import loadPage from "./page-loader";
+
+loadPage();
