@@ -1,3 +1,5 @@
+import mainImage from "./assets/cottonbro.jpeg";
+
 export default function loadPage() {
   const content = document.createElement("div");
   document.body.appendChild(content);
@@ -14,7 +16,7 @@ export default function loadPage() {
   const title = document.createElement("h2");
   const description = document.createElement("p");
   const btnCallToAction = document.createElement("button");
-  const mainElements = [title, description, btnCallToAction];
+  const mainElements = [bgImage, title, description, btnCallToAction];
 
   navNames.forEach((name) =>
     ul.appendChild(
@@ -28,7 +30,7 @@ export default function loadPage() {
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
 
-  bgImage.src = "./assets/cottonbro.jpeg";
+  bgImage.src = mainImage;
   bgImage.alt = "plate with boiled eggs";
   bgImage.classList.add("hero-image");
 
