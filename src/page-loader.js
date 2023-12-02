@@ -32,12 +32,10 @@ export default function loadPage() {
 
   bgImage.src = mainImage;
   bgImage.alt = "plate with boiled eggs";
-  bgImage.classList.add("hero-image");
+  bgImage.id = "hero-image";
 
   mainElements.forEach((element) => main.appendChild(element));
 
   content.appendChild(header);
   content.appendChild(main);
-
-  console.log(content);
 }
