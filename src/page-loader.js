@@ -29,7 +29,7 @@ export default function loadPage() {
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
 
-  bgImage.src = "./cottonbro";
+  bgImage.src = "./assets/cottonbro.jpeg";
   bgImage.alt = "plate with boiled eggs";
   bgImage.classList.add("hero-image");
   homePageContentDiv.appendChild(bgImage);
