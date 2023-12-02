@@ -3,7 +3,6 @@ export default function loadPage() {
   document.body.appendChild(content);
   content.id = "content";
 
-  const homePageContentDiv = document.createElement("div");
   const bgImage = document.createElement("img");
 
   const header = document.createElement("header");
@@ -32,11 +31,11 @@ export default function loadPage() {
   bgImage.src = "./assets/cottonbro.jpeg";
   bgImage.alt = "plate with boiled eggs";
   bgImage.classList.add("hero-image");
-  homePageContentDiv.appendChild(bgImage);
 
   mainElements.forEach((element) => main.appendChild(element));
 
-  homePageContentDiv.appendChild(header);
-  homePageContentDiv.appendChild(main);
-  content.appendChild(homePageContentDiv);
+  content.appendChild(header);
+  content.appendChild(main);
+
+  console.log(content);
 }

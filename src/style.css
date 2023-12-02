@@ -8,12 +8,15 @@
 }
 
 body {
-  color: blue;
+  color: rgb(35, 35, 112);
 }
 
 #content {
-  border: 2px solid green;
-  background-color: yellow;
+  border: 5px solid green;
+  width: 100vw;
+  height: 100vh;
+  /* background: url("./assets/cottonbro.jpeg") center center; */
+
   display: grid;
   grid-template-rows: 10vh 1fr;
   position: relative;
