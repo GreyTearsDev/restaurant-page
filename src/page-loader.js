@@ -1,5 +1,8 @@
 export default function loadPage() {
-  const content = document.getElementById("content");
+  const content = document.createElement("div");
+  content.id = "content";
+
+  const homePageContentDiv = document.createElement("div");
   const bgImage = document.createElement("img");
 
   const header = document.createElement("header");
@@ -13,27 +16,24 @@ export default function loadPage() {
   const btnCallToAction = document.createElement("button");
   const mainElements = [title, description, btnCallToAction];
 
-  content.appendChild(bgImage);
-
-  header.appendChild(
-    nav.appendChild(
-      ul.appendChild(
-        navNames.forEach((name) =>
-          document
-            .createElement("li")
-            .appendChild(document.createTextNode(name))
-        )
-      )
+  navNames.forEach((name) =>
+    ul.appendChild(
+      document.createElement("li").appendChild(document.createTextNode(name))
     )
   );
+
+  header.appendChild(nav.appendChild(ul));
 
   title.textContent = "Small, Affordable, Healthy Bites by the Shore";
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
 
-  bgImage.src = "../images/pexels-cottonbro-hero-6466.jpeg";
+  bgImage.src = "./images/cottonbro.jpeg";
   bgImage.alt = "plate with boiled eggs";
   bgImage.classList.add("hero-image");
+  homePageContentDiv.appendChild(bgImage);
 
   mainElements.forEach((element) => main.appendChild(element));
+
+  document.body.appendChild(content.appendChild(homePageContentDiv));
 }
