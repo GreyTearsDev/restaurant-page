@@ -1,4 +1,5 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
+import "./style.css";
 
 export default function loadPage() {
   const content = document.createElement("div");
@@ -8,9 +9,9 @@ export default function loadPage() {
   const bgImage = document.createElement("img");
 
   const header = document.createElement("header");
-  const nav = document.createElement("nav");
+
   const ul = document.createElement("ul");
-  const navNames = ["Home", "Menu", "Contact"];
+  const liNames = ["Home", "Menu", "Contact"];
 
   const main = document.createElement("main");
   const title = document.createElement("h2");
@@ -18,13 +19,11 @@ export default function loadPage() {
   const btnCallToAction = document.createElement("button");
   const mainElements = [bgImage, title, description, btnCallToAction];
 
-  navNames.forEach((name) =>
-    ul.appendChild(
-      document.createElement("li").appendChild(document.createTextNode(name))
-    )
-  );
-
-  header.appendChild(nav.appendChild(ul));
+  liNames.forEach((name) => {
+    let liElement = document.createElement("li");
+    liElement.textContent = name;
+    ul.appendChild(liElement);
+  });
 
   title.textContent = "Small, Affordable, Healthy Bites by the Shore";
   description.textContent =
@@ -34,8 +33,11 @@ export default function loadPage() {
   bgImage.alt = "plate with boiled eggs";
   bgImage.id = "hero-image";
 
+  header.appendChild(ul);
+
   mainElements.forEach((element) => main.appendChild(element));
 
   content.appendChild(header);
   content.appendChild(main);
+  console.log(ul);
 }

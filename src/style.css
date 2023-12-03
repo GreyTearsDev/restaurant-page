@@ -25,26 +25,37 @@
   --accent: #d9a404;
   --white: #fff;
   --balck: #000;
-}
-
-body {
-  color: rgb(135, 135, 255);
-  position: relative;
   font-family: "Playfair";
 }
 
-#content {
-  border: 5px solid rgb(91, 243, 91);
-  width: 100vw;
-  height: 100vh;
-  /* background: url("./assets/cottonbro.jpeg") center center; */
-
-  display: grid;
-  grid-template-rows: 10vh 1fr;
+body {
+  position: relative;
 }
 
-h1 {
-  display: none;
+#logo {
+  font-family: "Playfair";
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  color: rgb(6, 63, 114);
+
+  border: 5px solid rgb(226, 178, 34);
+}
+
+#content {
+  border: 5px solid rgb(79, 195, 79);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10vh 1fr;
 }
 
 #hero-image {
