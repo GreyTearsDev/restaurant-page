@@ -124,15 +124,16 @@ img {
   background-color: var(--accent);
 
   font-size: clamp(16px, 1.5rem, 5rem);
-  transition-property: color;
+  transition-property: color background-color scale;
   transition-duration: 300ms;
 }
 
 #home-info-container > button:hover,
 #home-info-container > button:focus {
   cursor: pointer;
-  color: var(--accent);
-  background-color: var(--light-accent);
+  color: var(--white);
+  background-color: var(--black);
+  scale: 103%;
 }
 
 #main-menu {
