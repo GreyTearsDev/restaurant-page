@@ -131,6 +131,6 @@ main {
   background-color: var(--light-accent);
 }
 
-.blured {
+#blur {
   filter: blur(20px);
 }

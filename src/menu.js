@@ -7,6 +7,7 @@ export default function loadMenu() {
   bgImage.src = mainImage;
   bgImage.alt = "plate with boiled eggs";
   bgImage.id = "hero-image";
+  bgImage.style.filter = "blur(10px)";
 
   main.appendChild(bgImage);
   return main;
@@ -20,8 +21,6 @@ const menuItem = function createMenuItem(name, price, imageSrc) {
   const itemBody = document.createElement("div");
 
   imageElement.src = imageSrc;
-  imageElement.classList = "blured";
-  imageElement.style.filter = "blur(5px)";
 
   nameElement.textContent = name;
   nameElement.className = "item-name";
