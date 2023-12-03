@@ -74,6 +74,8 @@ li:hover {
   position: absolute;
   top: 0px;
   z-index: -1;
+  transition-property: filter;
+  filter: blur(0px);
 }
 
 img {
@@ -82,7 +84,7 @@ img {
   object-fit: cover;
 }
 
-main {
+#main-home {
   position: relative;
   display: grid;
   align-items: center;
@@ -131,6 +133,16 @@ main {
   background-color: var(--light-accent);
 }
 
-#blur {
-  filter: blur(20px);
+#main-menu {
+  background-color: #cd9b05;
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: minmax(1fr, 1fr);
+  grid-template-rows: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.item-body > img {
+  width: 10%;
 }

@@ -1,22 +1,33 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
+import image1 from "/src/assets/images/antoni-shkraba.jpeg";
+import image2 from "/src/assets/images/karthik-reddy.jpeg";
+import image3 from "/src/assets/images/унайзат-юшаева.jpeg";
+import image4 from "/src/assets/images/alberta-studios.jpeg";
+import image5 from "/src/assets/images/gustavo-peres..jpeg";
+import image6 from "/src/assets/images/marina-leonova.jpeg";
 
 export default function loadMenu() {
   const main = document.createElement("main");
-  const bgImage = document.createElement("img");
+  main.id = "main-menu";
+  main.style.backgroundColor = "#cd9b05";
 
-  bgImage.src = mainImage;
-  bgImage.alt = "plate with boiled eggs";
-  bgImage.id = "hero-image";
-  bgImage.style.filter = "blur(10px)";
+  const item1 = menuItem("Avocato and Bacon Toast", "5300kz", image1);
+  const item2 = menuItem("Pancake Caroline", "4500kz", image2);
+  const item3 = menuItem("Avocato and Yogurt Toast", "2300kz", image3);
+  const item4 = menuItem("Alberta Pizza", "9500kz", image4);
+  const item5 = menuItem("Family BBQ", "15000kz", image5);
+  const item6 = menuItem("Pizza Basilicata", "12000kz", image6);
 
-  main.appendChild(bgImage);
+  const dishes = [item1, item2, item3, item4, item5, item6];
+
+  dishes.forEach((dish) => main.appendChild(dish));
   return main;
 }
 
 const menuItem = function createMenuItem(name, price, imageSrc) {
   const imageElement = document.createElement("img");
-  const nameElement = document.createElement("p");
-  const priceElement = document.createElement("h4");
+  const nameElement = document.createElement("h3");
+  const priceElement = document.createElement("p");
   const namePriceContainer = document.createElement("div");
   const itemBody = document.createElement("div");
 
@@ -31,10 +42,9 @@ const menuItem = function createMenuItem(name, price, imageSrc) {
   namePriceContainer.appendChild(nameElement);
   namePriceContainer.appendChild(priceElement);
 
+  itemBody.className = "item-body";
   itemBody.appendChild(imageElement);
   itemBody.appendChild(namePriceContainer);
 
-  return { imageElement, nameElement, priceElement };
+  return itemBody;
 };
-
-const test = menuItem("me", 20, mainImage);

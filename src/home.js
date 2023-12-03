@@ -2,6 +2,7 @@ import mainImage from "./assets/images/cottonbro.jpeg";
 
 export default function loadHome() {
   const main = document.createElement("main");
+  main.id = "main-home";
   const bgImage = document.createElement("img");
 
   const title = document.createElement("h1");
