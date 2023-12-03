@@ -1,19 +1,19 @@
-export default function loadPage(liElements, main) {
-  const ul = document.createElement("ul");
-  liElements.forEach((name) => ul.appendChild(name));
+export const header = (function () {
+  const header = document.createElement("header");
+  return header;
+})();
 
+export default function loadPage(liElements, main, header) {
   const content = document.createElement("div");
   document.body.appendChild(content);
   content.id = "content";
-
-  const header = document.createElement("header");
-
-  console.log(main);
+  // content.removeChild(main);
+  const ul = document.createElement("ul");
+  liElements.forEach((name) => ul.appendChild(name));
 
   header.appendChild(ul);
   content.appendChild(header);
   content.appendChild(main);
-  return "hi";
 }
 
 export const navElements = (function () {

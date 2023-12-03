@@ -1,12 +1,31 @@
 import loadPage from "./page-loader";
+import { header } from "./page-loader";
 import { navElements } from "./page-loader";
 import loadHome from "./home";
+import loadMenu from "./menu";
 import "./style.css";
 
-console.log();
+(function () {
+  const homeMain = loadHome();
+  const menuMain = loadMenu();
+  loadPage(navElements, homeMain, header);
 
-loadPage(navElements, loadHome());
+  (function loadEventListeners() {
+    const homeBtn = navElements[0];
+    const menuBtn = navElements[1];
+    const contactBtn = navElements[2];
 
+    homeBtn.addEventListener("click", switchTo);
+  })();
+
+  function switchTo(event) {
+    const content = document.getElementById("content");
+    if (event.target.textContent === "Home") {
+      content.removeChild(content.lastChild);
+      loadPage(navElements, menuMain, header);
+    }
+  }
+})();
 // to do
 /*
  3- make the header div fade in when the nav bar is hovered
