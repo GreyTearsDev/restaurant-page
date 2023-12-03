@@ -8,6 +8,9 @@ import "./style.css";
 (function () {
   const homeMain = loadHome();
   const menuMain = loadMenu();
+  const contactMain = loadMenu();
+  const galleryMain = loadMenu();
+
   loadPage(navElements, homeMain, header);
 
   (function loadEventListeners() {
@@ -20,10 +23,18 @@ import "./style.css";
 
   function switchTo(event) {
     const content = document.getElementById("content");
-    if (event.target.textContent === "Home") {
-      document.body.removeChild(content);
+    document.body.removeChild(content);
 
-      loadPage(navElements, homeMain, header);
+    switch (event.target.textContent) {
+      case "Home":
+        loadPage(navElements, homeMain, header);
+        break;
+      case "Menu":
+        loadPage(navElements, menuMain, header);
+        break;
+      case "Contact":
+        loadPage(navElements, contactMain, header);
+        break;
     }
   }
 })();

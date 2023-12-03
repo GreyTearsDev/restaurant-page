@@ -13,7 +13,6 @@ export default function loadPage(liElements, main, header) {
 
   header.appendChild(ul);
   content.appendChild(header);
-  console.log(main);
   content.appendChild(main);
 }
 
