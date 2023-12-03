@@ -20,7 +20,7 @@
 }
 
 :root {
-  --dominant: #bfb7a8;
+  --light-accent: #f3f3f3;
   --accent: #cd9b05;
   --white: #fff;
   --balck: #000;
@@ -93,6 +93,7 @@ main {
 #title {
   font-size: clamp(1.7rem, 3.5rem, 5rem);
   font-family: "Lugrasimo";
+  color: var(--accent);
 }
 
 #home-info-container {
@@ -115,5 +116,17 @@ main {
 
 #home-info-container > button {
   padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--light-accent);
   font-size: clamp(16px, 1.5rem, 5rem);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+#home-info-container > button:hover,
+#home-info-container > button:focus {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--accent);
 }
