@@ -1,4 +1,4 @@
-import mainImage from "./assets/cottonbro.jpeg";
+import mainImage from "./assets/images/cottonbro.jpeg";
 
 export default function loadPage() {
   const content = document.createElement("div");

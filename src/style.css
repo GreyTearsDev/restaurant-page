@@ -1,3 +1,16 @@
+@font-face {
+  font-family: Lugrasimo;
+  src: url("./assets/fonts/Lugrasimo/Lugrasimo-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Playfair;
+  src: url("./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf"),
+    url("./assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +23,7 @@
 body {
   color: rgb(135, 135, 255);
   position: relative;
+  font-family: "Playfair";
 }
 
 #content {
