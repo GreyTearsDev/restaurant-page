@@ -55,7 +55,7 @@ ul {
 li {
   font-size: clamp(16px, 2rem, 2.2rem);
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 300ms;
 }
 
 li:hover {
@@ -116,16 +116,21 @@ main {
 #home-info-container > button {
   padding: 0.7rem 1.4rem;
   font-weight: 600;
-  color: var(--accent);
-  background-color: var(--light-accent);
+  color: var(--white);
+  background-color: var(--accent);
+
   font-size: clamp(16px, 1.5rem, 5rem);
   transition-property: color;
-  transition-duration: 0.3s;
+  transition-duration: 300ms;
 }
 
 #home-info-container > button:hover,
 #home-info-container > button:focus {
   cursor: pointer;
-  color: var(--white);
-  background-color: var(--accent);
+  color: var(--accent);
+  background-color: var(--light-accent);
+}
+
+.blured {
+  filter: blur(20px);
 }
