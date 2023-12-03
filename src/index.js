@@ -14,11 +14,9 @@ import "./style.css";
   loadPage(navElements, homeMain, header);
 
   (function loadEventListeners() {
-    const homeBtn = navElements[0];
-    const menuBtn = navElements[1];
-    const contactBtn = navElements[2];
-
-    homeBtn.addEventListener("click", switchTo);
+    navElements.forEach((liElement) =>
+      liElement.addEventListener("click", switchTo)
+    );
   })();
 
   function switchTo(event) {
