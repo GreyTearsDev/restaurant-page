@@ -19,13 +19,12 @@ export default function loadPage() {
   title.id = "title";
   const description = document.createElement("p");
   const btnCallToAction = document.createElement("button");
+  btnCallToAction.textContent = "See our space";
   const homeInfoContainer = document.createElement("div");
   homeInfoContainer.id = "home-info-container";
   homeInfoContainer.appendChild(title);
   homeInfoContainer.appendChild(description);
   homeInfoContainer.appendChild(btnCallToAction);
-
-  btnCallToAction.textContent = "See our space";
   const mainElements = [bgImage, homeInfoContainer];
 
   liNames.forEach((name) => {
@@ -49,4 +48,6 @@ export default function loadPage() {
   content.appendChild(header);
   content.appendChild(main);
   console.log(ul);
+
+  return {};
 }
