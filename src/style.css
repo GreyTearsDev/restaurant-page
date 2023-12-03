@@ -137,12 +137,30 @@ img {
   background-color: #cd9b05;
   border: 2px solid blue;
   display: grid;
-  grid-template-columns: minmax(1fr, 1fr);
-  grid-template-rows: 1fr 1fr;
+  padding: 2vh 4vw;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vw;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+}
+
+.item-body {
+  border: 1px solid rgb(238, 0, 255);
+  display: grid;
+  justify-content: center;
+
+  grid-template-rows: 1fr;
 }
 
 .item-body > img {
-  width: 10%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.name-price-container {
+  width: 100%;
+  border: 1px solid rgb(64, 255, 0);
+  background-color: var(--white);
 }

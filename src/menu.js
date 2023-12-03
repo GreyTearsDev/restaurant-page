@@ -1,24 +1,20 @@
-import mainImage from "./assets/images/cottonbro.jpeg";
 import image1 from "/src/assets/images/antoni-shkraba.jpeg";
 import image2 from "/src/assets/images/karthik-reddy.jpeg";
-import image3 from "/src/assets/images/унайзат-юшаева.jpeg";
-import image4 from "/src/assets/images/alberta-studios.jpeg";
-import image5 from "/src/assets/images/gustavo-peres..jpeg";
-import image6 from "/src/assets/images/marina-leonova.jpeg";
+import image3 from "/src/assets/images/alberta-studios.jpeg";
+import image4 from "/src/assets/images/gustavo-peres..jpeg";
+import image5 from "/src/assets/images/marina-leonova.jpeg";
 
 export default function loadMenu() {
   const main = document.createElement("main");
   main.id = "main-menu";
-  main.style.backgroundColor = "#cd9b05";
 
-  const item1 = menuItem("Avocato and Bacon Toast", "5300kz", image1);
+  const item1 = menuItem("Avocato Toast", "5300kz", image1);
   const item2 = menuItem("Pancake Caroline", "4500kz", image2);
-  const item3 = menuItem("Avocato and Yogurt Toast", "2300kz", image3);
-  const item4 = menuItem("Alberta Pizza", "9500kz", image4);
-  const item5 = menuItem("Family BBQ", "15000kz", image5);
-  const item6 = menuItem("Pizza Basilicata", "12000kz", image6);
+  const item3 = menuItem("Alberta Pizza", "9500kz", image3);
+  const item4 = menuItem("Family BBQ", "15000kz", image4);
+  const item5 = menuItem("Pizza Basilicata", "12000kz", image5);
 
-  const dishes = [item1, item2, item3, item4, item5, item6];
+  const dishes = [item1, item2, item3, item4, item5];
 
   dishes.forEach((dish) => main.appendChild(dish));
   return main;
