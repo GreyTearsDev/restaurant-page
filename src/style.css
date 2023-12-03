@@ -20,6 +20,13 @@
   font-size: 16px;
 }
 
+:root {
+  --dominant: #bfb7a8;
+  --accent: #d9a404;
+  --white: #fff;
+  --balck: #000;
+}
+
 body {
   color: rgb(135, 135, 255);
   position: relative;
