@@ -28,7 +28,6 @@ h1 {
 
 #hero-image {
   position: absolute;
-  filter: brightness(115%);
   top: 0px;
   z-index: -1;
 }

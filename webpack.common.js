@@ -1,4 +1,5 @@
 const path = require("path");
+const ImageminPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   module: {
