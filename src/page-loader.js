@@ -14,7 +14,7 @@ export default function loadPage() {
   const liNames = ["Home", "Menu", "Contact"];
 
   const main = document.createElement("main");
-  const title = document.createElement("h2");
+  const title = document.createElement("h1");
   const description = document.createElement("p");
   const btnCallToAction = document.createElement("button");
   const mainElements = [bgImage, title, description, btnCallToAction];

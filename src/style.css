@@ -48,8 +48,17 @@ ul {
   display: flex;
   gap: 5vw;
   list-style: none;
-  font-size: 2em;
+}
+
+li {
+  font-size: 2rem;
   font-weight: 600;
+  transition: color 0.3s;
+}
+
+li:hover {
+  cursor: pointer;
+  color: var(--balck);
 }
 
 #content {
