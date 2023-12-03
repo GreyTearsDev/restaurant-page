@@ -20,10 +20,10 @@
 }
 
 :root {
-  --light-accent: #f3f3f3;
+  --light-accent: #b6b6b68e;
   --accent: #cd9b05;
   --white: #fff;
-  --black: #000;
+  --black: #000000;
   font-family: "Playfair";
 }
 
@@ -44,6 +44,7 @@ header {
   align-items: center;
   background-color: var(--white);
   color: var(--accent);
+  border-bottom: 1px solid #cd9b054e;
 }
 
 ul {
@@ -100,6 +101,9 @@ img {
 }
 
 #home-info-container {
+  border: 1px solid #cd9b054e;
+  box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.059);
+
   width: clamp(350px, 35vw, 45vw);
   margin-left: 15vw;
   height: 70vh;
@@ -124,12 +128,14 @@ img {
   background-color: var(--accent);
 
   font-size: clamp(16px, 1.5rem, 5rem);
-  transition-property: color background-color scale;
+  transition-property: color background-color scale box-shadow;
   transition-duration: 300ms;
 }
 
 #home-info-container > button:hover,
 #home-info-container > button:focus {
+  box-shadow: 2px 4px 16px #0000005f;
+
   cursor: pointer;
   color: var(--white);
   background-color: var(--black);
@@ -140,19 +146,18 @@ img {
   background-color: var(--white);
   display: grid;
   padding: 2vh 4vw;
-
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
   grid-template-rows: repeat(2, 1fr);
-  gap: 2vw 4vw;
+  gap: 2vw clamp(4vw, 5vw, 6vw);
   width: 100vw;
   height: 100%;
 }
 
 .item-body {
-  border: 1px solid var(--accent);
+  border: 1px solid #cd9b054e;
   display: grid;
   justify-content: center;
-  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.174);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.119);
   padding: 10%;
   grid-template-rows: 1fr;
   transition-property: box-shadow, scale;
@@ -177,4 +182,13 @@ img {
   padding-top: 4vh;
 
   background-color: var(--white);
+}
+
+.item-name {
+  font-size: 1.4em;
+}
+
+.item-price {
+  color: var(--accent);
+  font-size: 1.4em;
 }
