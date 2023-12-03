@@ -14,10 +14,19 @@ export default function loadPage() {
   const liNames = ["Home", "Menu", "Contact"];
 
   const main = document.createElement("main");
+
   const title = document.createElement("h1");
+  title.id = "title";
   const description = document.createElement("p");
   const btnCallToAction = document.createElement("button");
-  const mainElements = [bgImage, title, description, btnCallToAction];
+  const homeInfoContainer = document.createElement("div");
+  homeInfoContainer.id = "home-info-container";
+  homeInfoContainer.appendChild(title);
+  homeInfoContainer.appendChild(description);
+  homeInfoContainer.appendChild(btnCallToAction);
+
+  btnCallToAction.textContent = "See our space";
+  const mainElements = [bgImage, homeInfoContainer];
 
   liNames.forEach((name) => {
     let liElement = document.createElement("li");
@@ -25,7 +34,7 @@ export default function loadPage() {
     ul.appendChild(liElement);
   });
 
-  title.textContent = "Small, Affordable, Healthy Bites by the Shore";
+  title.textContent = "O Kazukuta";
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
 
