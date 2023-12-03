@@ -1,5 +1,3 @@
-import "./style.css";
-
 export default function loadPage(liElements, main) {
   const ul = document.createElement("ul");
   liElements.forEach((name) => ul.appendChild(name));

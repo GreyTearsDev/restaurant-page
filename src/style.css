@@ -105,7 +105,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 5%;
-  letter-spacing: 1px;
+  word-spacing: 2px;
   background-color: var(--white);
 }
 

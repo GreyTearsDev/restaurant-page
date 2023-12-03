@@ -1,6 +1,7 @@
 import loadPage from "./page-loader";
 import { navElements } from "./page-loader";
 import loadHome from "./home";
+import "./style.css";
 
 console.log();
 

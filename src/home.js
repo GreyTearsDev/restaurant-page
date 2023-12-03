@@ -1,5 +1,4 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
-import "./style.css";
 
 export default function loadHome() {
   const main = document.createElement("main");
