@@ -55,12 +55,14 @@ ul {
 li {
   font-size: clamp(16px, 2rem, 2.2rem);
   font-weight: 600;
-  transition: color 300ms;
+  transition-property: color scale;
+  transition-duration: 300ms;
 }
 
 li:hover {
   cursor: pointer;
   color: var(--black);
+  scale: 103%;
 }
 
 #content {
@@ -149,9 +151,17 @@ img {
   border: 1px solid var(--accent);
   display: grid;
   justify-content: center;
-  box-shadow: 1px 3px 16px rgba(0, 0, 0, 0.174);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.174);
   padding: 10%;
   grid-template-rows: 1fr;
+  transition-property: box-shadow, scale;
+  transition-duration: 300ms;
+}
+
+.item-body:hover {
+  box-shadow: 2px 4px 16px #cd9b055f;
+  cursor: pointer;
+  scale: 102%;
 }
 
 .item-body > img {
