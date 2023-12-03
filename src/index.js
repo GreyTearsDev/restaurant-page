@@ -1,6 +1,10 @@
 import loadPage from "./page-loader";
+import { navElements } from "./page-loader";
+import loadHome from "./home";
 
-loadPage();
+console.log();
+
+loadPage(navElements, loadHome());
 
 // to do
 /*
