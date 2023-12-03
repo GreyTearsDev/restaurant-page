@@ -21,8 +21,9 @@ import "./style.css";
   function switchTo(event) {
     const content = document.getElementById("content");
     if (event.target.textContent === "Home") {
-      content.removeChild(content.lastChild);
-      loadPage(navElements, menuMain, header);
+      document.body.removeChild(content);
+
+      loadPage(navElements, homeMain, header);
     }
   }
 })();
