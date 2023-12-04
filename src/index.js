@@ -1,35 +1,32 @@
 import loadPage from "./page-loader";
-import { header } from "./page-loader";
 import loadHome from "./home";
 import loadMenu from "./menu";
-import { createNavElements } from "./htlm-elements";
+import { createHeader } from "./htlm-elements";
+import { createContent } from "./htlm-elements";
 import "./style.css";
 
 (function () {
+  const content = createContent();
+  const header = createHeader();
   const homeMain = loadHome();
   const menuMain = loadMenu();
-  const contactMain = loadMenu();
-  const galleryMain = loadMenu();
-  const navElements = createNavElements();
+  content.appendChild(header);
+  content.appendChild(homeMain);
+  // loadPage(homeMain);
 
-  loadPage(homeMain);
-
-  (function loadEventListeners() {
-    navElements.forEach((liElement) =>
-      liElement.addEventListener("click", switchTo)
-    );
-  })();
+  const navElements = document.querySelectorAll("li");
+  navElements.forEach((li) => li.addEventListener("click", switchTo));
 
   function switchTo(event) {
-    const content = document.getElementById("content");
-    document.body.removeChild(content);
-
+    console.log("tete");
     switch (event.target.textContent) {
       case "Home":
-        loadPage(homeMain);
+        content.removeChild(content.lastChild);
+        content.appendChild(homeMain);
         break;
       case "Menu":
-        loadPage(menuMain);
+        content.removeChild(content.lastChild);
+        content.appendChild(menuMain);
         break;
       case "Contact":
         loadPage(contactMain);
@@ -37,6 +34,7 @@ import "./style.css";
     }
   }
 })();
+
 // to do
 /*
  1- refactor the loadmenu function 

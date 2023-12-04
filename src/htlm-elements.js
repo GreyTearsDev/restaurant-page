@@ -1,4 +1,9 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
+import image1 from "/src/assets/images/antoni-shkraba.jpeg";
+import image2 from "/src/assets/images/karthik-reddy.jpeg";
+import image3 from "/src/assets/images/alberta-studios.jpeg";
+import image4 from "/src/assets/images/gustavo-peres..jpeg";
+import image5 from "/src/assets/images/marina-leonova.jpeg";
 
 export const createBgImage = () => {
   const bgImage = document.createElement("img");
@@ -12,7 +17,6 @@ export const createBgImage = () => {
 
 export const createMain = () => {
   const main = document.createElement("main");
-  main.id = "main-home";
   return main;
 };
 
@@ -24,6 +28,7 @@ export const createInfoElement = () => {
 
   title.id = "title";
   btnCallToAction.textContent = "See our space";
+  btnCallToAction.id = "call-to-action";
   title.textContent = "O Kazukuta";
   description.textContent =
     "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
@@ -47,7 +52,7 @@ export const createHeader = () => {
   return header;
 };
 
-export const createNavElements = () => {
+function createNavElements() {
   const home = document.createElement("li");
   const menu = document.createElement("li");
   const contact = document.createElement("li");
@@ -58,4 +63,47 @@ export const createNavElements = () => {
   contact.textContent = "Contact";
 
   return liElements;
+}
+
+const menuItem = function createMenuItem(name, price, imageSrc) {
+  const imageElement = document.createElement("img");
+  const nameElement = document.createElement("h3");
+  const priceElement = document.createElement("p");
+  const namePriceContainer = document.createElement("div");
+  const itemBody = document.createElement("div");
+
+  imageElement.src = imageSrc;
+
+  nameElement.textContent = name;
+  nameElement.className = "item-name";
+  priceElement.textContent = price;
+  priceElement.className = "item-price";
+
+  namePriceContainer.className = "name-price-container";
+  namePriceContainer.appendChild(nameElement);
+  namePriceContainer.appendChild(priceElement);
+
+  itemBody.className = "item-body";
+  itemBody.appendChild(imageElement);
+  itemBody.appendChild(namePriceContainer);
+
+  return itemBody;
+};
+
+export const getDishes = () => {
+  const item1 = menuItem("Avocato Toast", "5300kz", image1);
+  const item2 = menuItem("Pancake Caroline", "4500kz", image2);
+  const item3 = menuItem("Alberta Pizza", "9500kz", image3);
+  const item4 = menuItem("Family BBQ", "15000kz", image4);
+  const item5 = menuItem("Pizza Basilicata", "12000kz", image5);
+
+  return [item1, item2, item3, item4, item5];
+};
+
+export const createContent = () => {
+  const content = document.createElement("div");
+  document.body.appendChild(content);
+  content.id = "content";
+
+  return content;
 };
