@@ -6,17 +6,10 @@ import image5 from "/src/assets/images/marina-leonova.jpeg";
 
 export default function loadMenu() {
   const main = document.createElement("main");
+  const dishes = getDishes();
+  dishes.forEach((dish) => main.appendChild(dish));
   main.id = "main-menu";
 
-  const item1 = menuItem("Avocato Toast", "5300kz", image1);
-  const item2 = menuItem("Pancake Caroline", "4500kz", image2);
-  const item3 = menuItem("Alberta Pizza", "9500kz", image3);
-  const item4 = menuItem("Family BBQ", "15000kz", image4);
-  const item5 = menuItem("Pizza Basilicata", "12000kz", image5);
-
-  const dishes = [item1, item2, item3, item4, item5];
-
-  dishes.forEach((dish) => main.appendChild(dish));
   return main;
 }
 
@@ -44,3 +37,13 @@ const menuItem = function createMenuItem(name, price, imageSrc) {
 
   return itemBody;
 };
+
+function getDishes() {
+  const item1 = menuItem("Avocato Toast", "5300kz", image1);
+  const item2 = menuItem("Pancake Caroline", "4500kz", image2);
+  const item3 = menuItem("Alberta Pizza", "9500kz", image3);
+  const item4 = menuItem("Family BBQ", "15000kz", image4);
+  const item5 = menuItem("Pizza Basilicata", "12000kz", image5);
+
+  return [item1, item2, item3, item4, item5];
+}
