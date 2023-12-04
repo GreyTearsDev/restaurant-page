@@ -1,4 +1,3 @@
-import loadPage from "./page-loader";
 import loadHome from "./home";
 import loadMenu from "./menu";
 import { createHeader } from "./htlm-elements";
@@ -28,9 +27,14 @@ import "./style.css";
         content.removeChild(content.lastChild);
         content.appendChild(menuMain);
         break;
-      case "Contact":
-        loadPage(contactMain);
-        break;
+      // case "Contact":
+      //   content.removeChild(content.lastChild);
+      //   content.appendChild(contactMain);
+      //   break;
+      // case "See our Space":
+      //   content.removeChild(content.lastChild);
+      //   content.appendChild(gallerytMain);
+      //   break;
     }
   }
 })();

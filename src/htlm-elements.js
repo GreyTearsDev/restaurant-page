@@ -1,8 +1,8 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
 import image1 from "/src/assets/images/antoni-shkraba.jpeg";
-import image2 from "/src/assets/images/karthik-reddy.jpeg";
+import image2 from "/src/assets/images/pexels-valeria-boltneva.jpeg";
 import image3 from "/src/assets/images/alberta-studios.jpeg";
-import image4 from "/src/assets/images/gustavo-peres..jpeg";
+import image4 from "/src/assets/images/geraud-pfeiffer.jpeg";
 import image5 from "/src/assets/images/marina-leonova.jpeg";
 
 export const createBgImage = () => {
@@ -91,11 +91,11 @@ const menuItem = function createMenuItem(name, price, imageSrc) {
 };
 
 export const getDishes = () => {
-  const item1 = menuItem("Avocato Toast", "5300kz", image1);
-  const item2 = menuItem("Pancake Caroline", "4500kz", image2);
-  const item3 = menuItem("Alberta Pizza", "9500kz", image3);
-  const item4 = menuItem("Family BBQ", "15000kz", image4);
-  const item5 = menuItem("Pizza Basilicata", "12000kz", image5);
+  const item1 = menuItem("Avocato Toast", "5.300kz", image1);
+  const item2 = menuItem("Octopus Soup", "12.000kz", image2);
+  const item3 = menuItem("Alberta Pizza", "9.500kz", image3);
+  const item4 = menuItem("BBQ Pork", "15.000kz", image4);
+  const item5 = menuItem("Pizza Basilicata", "12.000kz", image5);
 
   return [item1, item2, item3, item4, item5];
 };
