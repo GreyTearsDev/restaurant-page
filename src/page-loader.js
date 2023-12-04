@@ -1,29 +1,12 @@
-export const header = (function () {
-  const header = document.createElement("header");
-  return header;
-})();
+import { createHeader } from "./htlm-elements";
 
-export default function loadPage(liElements, main, header) {
+export default function loadPage(main) {
   const content = document.createElement("div");
   document.body.appendChild(content);
   content.id = "content";
-  // content.removeChild(main);
-  const ul = document.createElement("ul");
-  liElements.forEach((name) => ul.appendChild(name));
 
-  header.appendChild(ul);
+  const header = createHeader();
+
   content.appendChild(header);
   content.appendChild(main);
 }
-
-export const navElements = (function () {
-  const home = document.createElement("li");
-  home.textContent = "Home";
-  const menu = document.createElement("li");
-  menu.textContent = "Menu";
-  const contact = document.createElement("li");
-  contact.textContent = "Contact";
-  const liElements = [home, menu, contact];
-
-  return liElements;
-})();

@@ -1,4 +1,3 @@
-import mainImage from "./assets/images/cottonbro.jpeg";
 import { createBgImage, createMain, createInfoElement } from "./htlm-elements";
 
 export default function loadHome() {

@@ -35,3 +35,27 @@ export const createInfoElement = () => {
 
   return homeInfoContainer;
 };
+
+export const createHeader = () => {
+  const ul = document.createElement("ul");
+  const header = document.createElement("header");
+  const liElements = createNavElements();
+
+  liElements.forEach((name) => ul.appendChild(name));
+  header.appendChild(ul);
+
+  return header;
+};
+
+export const createNavElements = () => {
+  const home = document.createElement("li");
+  const menu = document.createElement("li");
+  const contact = document.createElement("li");
+  const liElements = [home, menu, contact];
+
+  home.textContent = "Home";
+  menu.textContent = "Menu";
+  contact.textContent = "Contact";
+
+  return liElements;
+};

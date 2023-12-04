@@ -1,8 +1,8 @@
 import loadPage from "./page-loader";
 import { header } from "./page-loader";
-import { navElements } from "./page-loader";
 import loadHome from "./home";
 import loadMenu from "./menu";
+import { createNavElements } from "./htlm-elements";
 import "./style.css";
 
 (function () {
@@ -10,8 +10,9 @@ import "./style.css";
   const menuMain = loadMenu();
   const contactMain = loadMenu();
   const galleryMain = loadMenu();
+  const navElements = createNavElements();
 
-  loadPage(navElements, homeMain, header);
+  loadPage(homeMain);
 
   (function loadEventListeners() {
     navElements.forEach((liElement) =>
@@ -25,13 +26,13 @@ import "./style.css";
 
     switch (event.target.textContent) {
       case "Home":
-        loadPage(navElements, homeMain, header);
+        loadPage(homeMain);
         break;
       case "Menu":
-        loadPage(navElements, menuMain, header);
+        loadPage(menuMain);
         break;
       case "Contact":
-        loadPage(navElements, contactMain, header);
+        loadPage(contactMain);
         break;
     }
   }
