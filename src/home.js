@@ -1,31 +1,43 @@
 import mainImage from "./assets/images/cottonbro.jpeg";
 
 export default function loadHome() {
+  const homeInfoContainer = createInfoElement();
   const main = document.createElement("main");
-  main.id = "main-home";
-  const bgImage = document.createElement("img");
+  const bgImage = createBgImage();
+  const mainElements = [bgImage, homeInfoContainer];
 
+  main.id = "main-home";
+  mainElements.forEach((element) => main.appendChild(element));
+
+  return main;
+}
+
+function createInfoElement() {
   const title = document.createElement("h1");
-  title.id = "title";
   const description = document.createElement("p");
   const btnCallToAction = document.createElement("button");
-  btnCallToAction.textContent = "See our space";
   const homeInfoContainer = document.createElement("div");
+
+  title.id = "title";
+  btnCallToAction.textContent = "See our space";
+  title.textContent = "O Kazukuta";
+  description.textContent =
+    "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
+
   homeInfoContainer.id = "home-info-container";
   homeInfoContainer.appendChild(title);
   homeInfoContainer.appendChild(description);
   homeInfoContainer.appendChild(btnCallToAction);
-  const mainElements = [bgImage, homeInfoContainer];
 
-  title.textContent = "O Kazukuta";
-  description.textContent =
-    "Join us for an intimate culinary escape where the waves meet the plate and every bite is a moment to remember";
+  return homeInfoContainer;
+}
+
+function createBgImage() {
+  const bgImage = document.createElement("img");
 
   bgImage.src = mainImage;
   bgImage.alt = "plate with boiled eggs";
   bgImage.id = "hero-image";
 
-  mainElements.forEach((element) => main.appendChild(element));
-
-  return main;
+  return bgImage;
 }
