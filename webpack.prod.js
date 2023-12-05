@@ -7,7 +7,7 @@ module.exports = merge(common, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Restaurant Page",
+      title: "O Kazukuta",
     }),
   ],
 });
