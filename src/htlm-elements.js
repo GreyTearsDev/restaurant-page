@@ -1,4 +1,3 @@
-import mainImage from "./assets/images/cottonbro.jpeg";
 import image1 from "/src/assets/images/antoni-shkraba.jpeg";
 import image2 from "/src/assets/images/pexels-valeria-boltneva.jpeg";
 import image3 from "/src/assets/images/alberta-studios.jpeg";
@@ -6,11 +5,11 @@ import image4 from "/src/assets/images/geraud-pfeiffer.jpeg";
 import image5 from "/src/assets/images/marina-leonova.jpeg";
 import image6 from "/src/assets/images/karolina-grabowska.jpeg";
 
-export const createBgImage = () => {
+export const createBgImage = (image, alt) => {
   const bgImage = document.createElement("img");
 
-  bgImage.src = mainImage;
-  bgImage.alt = "plate with boiled eggs";
+  bgImage.src = image;
+  bgImage.alt = alt;
   bgImage.id = "hero-image";
 
   return bgImage;
@@ -121,6 +120,8 @@ export const createContactInfo = () => {
   const bodyElements = [title, email, phone, address, gitHub];
 
   title.textContent = "Contact us";
+  title.id = "contact-title";
+
   email.textContent = "Email: o@kazukuta.com";
   phone.textContent = "Phone: +244 999 888 777";
   address.textContent = "Address: Fancy Av, Cool City - P.O  Box 404";
@@ -130,7 +131,11 @@ export const createContactInfo = () => {
   gitLink.textContent = "@GreyTearsDev";
   gitHub.appendChild(gitLink);
 
-  bodyElements.forEach((element) => body.appendChild(element));
+  body.id = "info-body";
+  bodyElements.forEach((element) => {
+    element.className = "contact-text";
+    body.appendChild(element);
+  });
 
   return body;
 };

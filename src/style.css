@@ -213,3 +213,18 @@ img {
   color: var(--accent);
   font-size: 1.4em;
 }
+
+#contact-menu {
+  background-color: var(--accent);
+  display: flex;
+  justify-content: center;
+  padding: 4vh 4vw;
+}
+
+#info-body {
+  background-color: var(--white);
+  width: 30%;
+  height: clamp(200px, 500px, 70vh);
+  min-width: fit-content;
+  min-height: fit-content;
+}
