@@ -109,3 +109,28 @@ export const createContent = () => {
 
   return content;
 };
+
+export const createContactInfo = () => {
+  const body = document.createElement("div");
+  const title = document.createElement("h3");
+  const email = document.createElement("p");
+  const phone = document.createElement("p");
+  const address = document.createElement("p");
+  const gitHub = document.createElement("p");
+  const gitLink = document.createElement("a");
+  const bodyElements = [title, email, phone, address, gitHub];
+
+  title.textContent = "Contact us";
+  email.textContent = "Email: o@kazukuta.com";
+  phone.textContent = "Phone: +244 999 888 777";
+  address.textContent = "Address: Fancy Av, Cool City - P.O  Box 404";
+  gitHub.textContent = "GitHub: ";
+
+  gitLink.href = "https://github.com/GreyTearsDev";
+  gitLink.textContent = "@GreyTearsDev";
+  gitHub.appendChild(gitLink);
+
+  bodyElements.forEach((element) => body.appendChild(element));
+
+  return body;
+};
