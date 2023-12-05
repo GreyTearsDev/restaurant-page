@@ -4,6 +4,7 @@ import image2 from "/src/assets/images/pexels-valeria-boltneva.jpeg";
 import image3 from "/src/assets/images/alberta-studios.jpeg";
 import image4 from "/src/assets/images/geraud-pfeiffer.jpeg";
 import image5 from "/src/assets/images/marina-leonova.jpeg";
+import image6 from "/src/assets/images/karolina-grabowska.jpeg";
 
 export const createBgImage = () => {
   const bgImage = document.createElement("img");
@@ -96,8 +97,9 @@ export const getDishes = () => {
   const item3 = menuItem("Alberta Pizza", "9.500kz", image3);
   const item4 = menuItem("BBQ Pork", "15.000kz", image4);
   const item5 = menuItem("Pizza Basilicata", "12.000kz", image5);
+  const item6 = menuItem("Lamb à Pombé", "8.000kz", image6);
 
-  return [item1, item2, item3, item4, item5];
+  return [item1, item2, item3, item4, item5, item6];
 };
 
 export const createContent = () => {

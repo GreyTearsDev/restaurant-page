@@ -3,12 +3,14 @@ import loadMenu from "./menu";
 import { createHeader } from "./htlm-elements";
 import { createContent } from "./htlm-elements";
 import "./style.css";
+import loadContact from "./contact";
 
 (function () {
   const content = createContent();
   const header = createHeader();
   const homeMain = loadHome();
   const menuMain = loadMenu();
+  const contactMain = loadContact();
   content.appendChild(header);
   content.appendChild(homeMain);
   // loadPage(homeMain);
@@ -17,7 +19,6 @@ import "./style.css";
   navElements.forEach((li) => li.addEventListener("click", switchTo));
 
   function switchTo(event) {
-    console.log("tete");
     switch (event.target.textContent) {
       case "Home":
         content.removeChild(content.lastChild);
@@ -27,10 +28,10 @@ import "./style.css";
         content.removeChild(content.lastChild);
         content.appendChild(menuMain);
         break;
-      // case "Contact":
-      //   content.removeChild(content.lastChild);
-      //   content.appendChild(contactMain);
-      //   break;
+      case "Contact":
+        content.removeChild(content.lastChild);
+        content.appendChild(contactMain);
+        break;
       // case "See our Space":
       //   content.removeChild(content.lastChild);
       //   content.appendChild(gallerytMain);

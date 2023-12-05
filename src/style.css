@@ -148,6 +148,15 @@ img {
   scale: 103%;
 }
 
+#home-info-container > button:active {
+  box-shadow: 2px 4px 16px #0000005f;
+
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--black);
+  scale: 97%;
+}
+
 #main-menu {
   background-color: var(--white);
   display: grid;
