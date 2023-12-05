@@ -200,7 +200,6 @@ img {
 .name-price-container {
   width: 100%;
   position: relative;
-  top: -4vh;
   padding-top: 4vh;
 
   background-color: var(--white);
